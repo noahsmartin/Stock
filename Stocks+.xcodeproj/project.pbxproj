@@ -12,6 +12,14 @@
 		4FAFF6CE199EEE0500B4D55E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FAFF6CD199EEE0500B4D55E /* Images.xcassets */; };
 		4FAFF6D1199EEE0500B4D55E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FAFF6CF199EEE0500B4D55E /* MainMenu.xib */; };
 		4FAFF6DD199EEE0600B4D55E /* Stocks_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAFF6DC199EEE0600B4D55E /* Stocks_Tests.m */; };
+		4FAFF6ED199EEE9B00B4D55E /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FAFF6EC199EEE9B00B4D55E /* NotificationCenter.framework */; };
+		4FAFF6F4199EEE9B00B4D55E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4FAFF6F2199EEE9B00B4D55E /* InfoPlist.strings */; };
+		4FAFF6F7199EEE9B00B4D55E /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAFF6F6199EEE9B00B4D55E /* TodayViewController.m */; };
+		4FAFF6FA199EEE9B00B4D55E /* ListRowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAFF6F9199EEE9B00B4D55E /* ListRowViewController.m */; };
+		4FAFF6FC199EEE9B00B4D55E /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FAFF6FB199EEE9B00B4D55E /* TodayViewController.xib */; };
+		4FAFF6FE199EEE9B00B4D55E /* ListRowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FAFF6FD199EEE9B00B4D55E /* ListRowViewController.xib */; };
+		4FAFF701199EEE9B00B4D55E /* TodayStocks+.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4FAFF6EA199EEE9B00B4D55E /* TodayStocks+.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4FAFF70A199EEECE00B4D55E /* StockRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAFF709199EEECE00B4D55E /* StockRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,7 +30,35 @@
 			remoteGlobalIDString = 4FAFF6C2199EEE0500B4D55E;
 			remoteInfo = "Stocks+";
 		};
+		4FAFF6FF199EEE9B00B4D55E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FAFF6BB199EEE0500B4D55E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FAFF6E9199EEE9B00B4D55E;
+			remoteInfo = "TodayStocks+";
+		};
+		4FAFF702199EEE9B00B4D55E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FAFF6BB199EEE0500B4D55E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FAFF6E9199EEE9B00B4D55E;
+			remoteInfo = "TodayStocks+";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4FAFF707199EEE9B00B4D55E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4FAFF701199EEE9B00B4D55E /* TodayStocks+.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4FAFF6C3199EEE0500B4D55E /* Stocks+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stocks+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,6 +71,19 @@
 		4FAFF6D6199EEE0600B4D55E /* Stocks+Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Stocks+Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FAFF6DB199EEE0600B4D55E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FAFF6DC199EEE0600B4D55E /* Stocks_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Stocks_Tests.m; sourceTree = "<group>"; };
+		4FAFF6EA199EEE9B00B4D55E /* TodayStocks+.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TodayStocks+.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FAFF6EC199EEE9B00B4D55E /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		4FAFF6F0199EEE9B00B4D55E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FAFF6F1199EEE9B00B4D55E /* TodayStocks_.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TodayStocks_.entitlements; sourceTree = "<group>"; };
+		4FAFF6F3199EEE9B00B4D55E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4FAFF6F5199EEE9B00B4D55E /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		4FAFF6F6199EEE9B00B4D55E /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		4FAFF6F8199EEE9B00B4D55E /* ListRowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListRowViewController.h; sourceTree = "<group>"; };
+		4FAFF6F9199EEE9B00B4D55E /* ListRowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListRowViewController.m; sourceTree = "<group>"; };
+		4FAFF6FB199EEE9B00B4D55E /* TodayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayViewController.xib; sourceTree = "<group>"; };
+		4FAFF6FD199EEE9B00B4D55E /* ListRowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListRowViewController.xib; sourceTree = "<group>"; };
+		4FAFF708199EEECE00B4D55E /* StockRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockRequest.h; sourceTree = "<group>"; };
+		4FAFF709199EEECE00B4D55E /* StockRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +101,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4FAFF6E7199EEE9B00B4D55E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FAFF6ED199EEE9B00B4D55E /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -60,6 +117,8 @@
 			children = (
 				4FAFF6C5199EEE0500B4D55E /* Stocks+ */,
 				4FAFF6D9199EEE0600B4D55E /* Stocks+Tests */,
+				4FAFF6EE199EEE9B00B4D55E /* TodayStocks+ */,
+				4FAFF6EB199EEE9B00B4D55E /* Frameworks */,
 				4FAFF6C4199EEE0500B4D55E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,6 +128,7 @@
 			children = (
 				4FAFF6C3199EEE0500B4D55E /* Stocks+.app */,
 				4FAFF6D6199EEE0600B4D55E /* Stocks+Tests.xctest */,
+				4FAFF6EA199EEE9B00B4D55E /* TodayStocks+.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,6 +171,40 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4FAFF6EB199EEE9B00B4D55E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4FAFF6EC199EEE9B00B4D55E /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4FAFF6EE199EEE9B00B4D55E /* TodayStocks+ */ = {
+			isa = PBXGroup;
+			children = (
+				4FAFF6F5199EEE9B00B4D55E /* TodayViewController.h */,
+				4FAFF6F6199EEE9B00B4D55E /* TodayViewController.m */,
+				4FAFF6F8199EEE9B00B4D55E /* ListRowViewController.h */,
+				4FAFF6F9199EEE9B00B4D55E /* ListRowViewController.m */,
+				4FAFF708199EEECE00B4D55E /* StockRequest.h */,
+				4FAFF709199EEECE00B4D55E /* StockRequest.m */,
+				4FAFF6FB199EEE9B00B4D55E /* TodayViewController.xib */,
+				4FAFF6FD199EEE9B00B4D55E /* ListRowViewController.xib */,
+				4FAFF6EF199EEE9B00B4D55E /* Supporting Files */,
+			);
+			path = "TodayStocks+";
+			sourceTree = "<group>";
+		};
+		4FAFF6EF199EEE9B00B4D55E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4FAFF6F0199EEE9B00B4D55E /* Info.plist */,
+				4FAFF6F1199EEE9B00B4D55E /* TodayStocks_.entitlements */,
+				4FAFF6F2199EEE9B00B4D55E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,10 +215,13 @@
 				4FAFF6BF199EEE0500B4D55E /* Sources */,
 				4FAFF6C0199EEE0500B4D55E /* Frameworks */,
 				4FAFF6C1199EEE0500B4D55E /* Resources */,
+				4FAFF707199EEE9B00B4D55E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4FAFF700199EEE9B00B4D55E /* PBXTargetDependency */,
+				4FAFF703199EEE9B00B4D55E /* PBXTargetDependency */,
 			);
 			name = "Stocks+";
 			productName = "Stocks+";
@@ -149,6 +246,23 @@
 			productReference = 4FAFF6D6199EEE0600B4D55E /* Stocks+Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		4FAFF6E9199EEE9B00B4D55E /* TodayStocks+ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FAFF704199EEE9B00B4D55E /* Build configuration list for PBXNativeTarget "TodayStocks+" */;
+			buildPhases = (
+				4FAFF6E6199EEE9B00B4D55E /* Sources */,
+				4FAFF6E7199EEE9B00B4D55E /* Frameworks */,
+				4FAFF6E8199EEE9B00B4D55E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TodayStocks+";
+			productName = "TodayStocks+";
+			productReference = 4FAFF6EA199EEE9B00B4D55E /* TodayStocks+.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -164,6 +278,9 @@
 					4FAFF6D5199EEE0600B4D55E = {
 						CreatedOnToolsVersion = 6.0;
 						TestTargetID = 4FAFF6C2199EEE0500B4D55E;
+					};
+					4FAFF6E9199EEE9B00B4D55E = {
+						CreatedOnToolsVersion = 6.0;
 					};
 				};
 			};
@@ -182,6 +299,7 @@
 			targets = (
 				4FAFF6C2199EEE0500B4D55E /* Stocks+ */,
 				4FAFF6D5199EEE0600B4D55E /* Stocks+Tests */,
+				4FAFF6E9199EEE9B00B4D55E /* TodayStocks+ */,
 			);
 		};
 /* End PBXProject section */
@@ -200,6 +318,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FAFF6E8199EEE9B00B4D55E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FAFF6FE199EEE9B00B4D55E /* ListRowViewController.xib in Resources */,
+				4FAFF6FC199EEE9B00B4D55E /* TodayViewController.xib in Resources */,
+				4FAFF6F4199EEE9B00B4D55E /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +351,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4FAFF6E6199EEE9B00B4D55E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FAFF6F7199EEE9B00B4D55E /* TodayViewController.m in Sources */,
+				4FAFF70A199EEECE00B4D55E /* StockRequest.m in Sources */,
+				4FAFF6FA199EEE9B00B4D55E /* ListRowViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -230,6 +368,16 @@
 			isa = PBXTargetDependency;
 			target = 4FAFF6C2199EEE0500B4D55E /* Stocks+ */;
 			targetProxy = 4FAFF6D7199EEE0600B4D55E /* PBXContainerItemProxy */;
+		};
+		4FAFF700199EEE9B00B4D55E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4FAFF6E9199EEE9B00B4D55E /* TodayStocks+ */;
+			targetProxy = 4FAFF6FF199EEE9B00B4D55E /* PBXContainerItemProxy */;
+		};
+		4FAFF703199EEE9B00B4D55E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4FAFF6E9199EEE9B00B4D55E /* TodayStocks+ */;
+			targetProxy = 4FAFF702199EEE9B00B4D55E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -240,6 +388,14 @@
 				4FAFF6D0199EEE0500B4D55E /* Base */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		4FAFF6F2199EEE9B00B4D55E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4FAFF6F3199EEE9B00B4D55E /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -379,6 +535,36 @@
 			};
 			name = Release;
 		};
+		4FAFF705199EEE9B00B4D55E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "TodayStocks+/TodayStocks_.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TodayStocks+/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4FAFF706199EEE9B00B4D55E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "TodayStocks+/TodayStocks_.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "TodayStocks+/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -404,6 +590,14 @@
 			buildConfigurations = (
 				4FAFF6E4199EEE0600B4D55E /* Debug */,
 				4FAFF6E5199EEE0600B4D55E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4FAFF704199EEE9B00B4D55E /* Build configuration list for PBXNativeTarget "TodayStocks+" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FAFF705199EEE9B00B4D55E /* Debug */,
+				4FAFF706199EEE9B00B4D55E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
