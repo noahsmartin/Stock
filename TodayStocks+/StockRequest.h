@@ -16,6 +16,6 @@ typedef enum _DURATION {
 
 @interface StockRequest : NSObject
 
-+(void)startRequestWithSymbol:(NSString*)symbol duration:(DURATION)duration;
+-(void)startRequestWithSymbol:(NSString*)symbol duration:(DURATION)duration;
 
 @end

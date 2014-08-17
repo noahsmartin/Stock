@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F2502B319A01DA60015FDA7 /* DataPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2502B219A01DA60015FDA7 /* DataPoint.m */; };
+		4F3F9ACA19A0FE4C00CA9D87 /* StockGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3F9AC919A0FE4C00CA9D87 /* StockGraph.m */; };
 		4FAFF6C9199EEE0500B4D55E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAFF6C8199EEE0500B4D55E /* main.m */; };
 		4FAFF6CC199EEE0500B4D55E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAFF6CB199EEE0500B4D55E /* AppDelegate.m */; };
 		4FAFF6CE199EEE0500B4D55E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FAFF6CD199EEE0500B4D55E /* Images.xcassets */; };
@@ -61,6 +63,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4F2502B119A01DA60015FDA7 /* DataPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataPoint.h; sourceTree = "<group>"; };
+		4F2502B219A01DA60015FDA7 /* DataPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataPoint.m; sourceTree = "<group>"; };
+		4F3F9AC819A0FE4C00CA9D87 /* StockGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockGraph.h; sourceTree = "<group>"; };
+		4F3F9AC919A0FE4C00CA9D87 /* StockGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockGraph.m; sourceTree = "<group>"; };
 		4FAFF6C3199EEE0500B4D55E /* Stocks+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stocks+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FAFF6C7199EEE0500B4D55E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FAFF6C8199EEE0500B4D55E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -188,6 +194,10 @@
 				4FAFF6F9199EEE9B00B4D55E /* ListRowViewController.m */,
 				4FAFF708199EEECE00B4D55E /* StockRequest.h */,
 				4FAFF709199EEECE00B4D55E /* StockRequest.m */,
+				4F3F9AC819A0FE4C00CA9D87 /* StockGraph.h */,
+				4F3F9AC919A0FE4C00CA9D87 /* StockGraph.m */,
+				4F2502B119A01DA60015FDA7 /* DataPoint.h */,
+				4F2502B219A01DA60015FDA7 /* DataPoint.m */,
 				4FAFF6FB199EEE9B00B4D55E /* TodayViewController.xib */,
 				4FAFF6FD199EEE9B00B4D55E /* ListRowViewController.xib */,
 				4FAFF6EF199EEE9B00B4D55E /* Supporting Files */,
@@ -356,7 +366,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FAFF6F7199EEE9B00B4D55E /* TodayViewController.m in Sources */,
+				4F3F9ACA19A0FE4C00CA9D87 /* StockGraph.m in Sources */,
 				4FAFF70A199EEECE00B4D55E /* StockRequest.m in Sources */,
+				4F2502B319A01DA60015FDA7 /* DataPoint.m in Sources */,
 				4FAFF6FA199EEE9B00B4D55E /* ListRowViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,6 +596,7 @@
 				4FAFF6E2199EEE0600B4D55E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4FAFF6E3199EEE0600B4D55E /* Build configuration list for PBXNativeTarget "Stocks+Tests" */ = {
 			isa = XCConfigurationList;
@@ -592,6 +605,7 @@
 				4FAFF6E5199EEE0600B4D55E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4FAFF704199EEE9B00B4D55E /* Build configuration list for PBXNativeTarget "TodayStocks+" */ = {
 			isa = XCConfigurationList;
@@ -600,6 +614,7 @@
 				4FAFF706199EEE9B00B4D55E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

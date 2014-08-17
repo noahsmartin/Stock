@@ -7,10 +7,18 @@
 //
 
 #import "StockRequest.h"
+#import "StockGraph.h"
+
+@interface StockRequest() <NSXMLParserDelegate>
+@property StockGraph* graph;
+@property bool open;
+@property bool close;
+@end
 
 @implementation StockRequest
 
-+(void)startRequestWithSymbol:(NSString *)symbol duration:(DURATION)duration {
+// TODO: pass a block here to use as a callback
+-(void)startRequestWithSymbol:(NSString *)symbol duration:(DURATION)duration {
     NSString* durationString = duration == DAY ? @"1d" : @"TODO";
     NSString* urlString = @"http://iphone-wu.apple.com/dgw?imei=3806635122142816500&apptype=finance";  // TODO: figure out the imei, maybe generate this randomly
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:urlString]];
@@ -27,10 +35,39 @@
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         if(!connectionError) {
             NSLog(@"finished");
-            // TODO: make a model type that gets created here from the results data
-            // Probably like a list of data points, each data point a timestamp and price
+            self.graph = [[StockGraph alloc] init];
+            NSXMLParser* parser = [[NSXMLParser alloc] initWithData:data];
+            [parser setDelegate:self];
+            [parser parse];
         }
     }];
+}
+
+- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
+{
+    if(self.open) {
+        [self.graph setOpen:[string doubleValue]];
+    } else if(self.close) {
+        [self.graph setClose:[string doubleValue]];
+    }
+}
+
+- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qualifiedName attributes:(NSDictionary *)attributeDict {
+    if([elementName isEqualToString:@"marketopen"]) {
+        self.open = YES;
+    } else if([elementName isEqualToString:@"marketclose"]) {
+        self.close = YES;
+    }else if([elementName isEqualToString:@"point"]) {
+        [self.graph addDataPoint:[[DataPoint alloc] initWithDictionary:attributeDict]];
+    }
+}
+
+-(void)parser:(NSXMLParser*)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
+    if([elementName isEqualToString:@"marketopen"]) {
+        self.open = NO;
+    } else if([elementName isEqualToString:@"marketclose"]) {
+        self.close = YES;
+    }
 }
 
 @end
