@@ -9,7 +9,6 @@
 #import "StockGraph.h"
 
 @interface StockGraph()
-@property (strong) NSMutableArray* points;
 
 @end
 
@@ -37,12 +36,32 @@
 }
 
 -(NSUInteger)numberOfPoints {
-    NSLog(@"count: %@", self.points);
     return self.points.count;
 }
 
 -(NSString*)description {
     return [NSString stringWithFormat:@"symbol: %@", self.symbol];
+}
+
+-(double)getMaxValue {
+    double max = -1;
+    for(DataPoint* point in self.points) {
+        if(point.price > max) {
+            max = point.price;
+        }
+    }
+    return max;
+}
+
+-(double)getMinValue {
+    // TODO: unhack this...
+    double min = 99999999;
+    for(DataPoint* point in self.points) {
+        if(point.price < min) {
+            min = point.price;
+        }
+    }
+    return min;
 }
 
 @end

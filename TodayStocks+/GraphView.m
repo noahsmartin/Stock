@@ -26,8 +26,25 @@
         [path lineToPoint:NSMakePoint(i*lineSpacing, height)];
         [path stroke];
     }
-    NSLog(@"draw: %ld" ,
-          count);
+    double minPrice = [self.data getMinValue];
+    double maxPrice = [self.data getMaxValue];
+    double span = maxPrice - minPrice;
+    double factor = height/span;
+    for(int i = 0; i < count-1; i++) {
+        DataPoint* point = [self.data.points objectAtIndex:i];
+        DataPoint* point2 = [self.data.points objectAtIndex:i+1];
+        double y = point.price - minPrice;
+        double yPixel = y * factor;
+        double y2 = point2.price - minPrice;
+        double yPixel2 = y2 * factor;
+        path = [[NSBezierPath alloc] init];
+        [path moveToPoint:NSMakePoint(i*pointSpacing, yPixel)];
+        [path lineToPoint:NSMakePoint((i+1)*pointSpacing, yPixel2)];
+        [path setLineWidth:0];
+        [[NSColor whiteColor] setStroke];
+        [path stroke];
+    }
+    
     
     // Drawing code here.
 }

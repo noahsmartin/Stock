@@ -10,6 +10,7 @@
 
 @interface DataPoint : NSObject
 -(instancetype)initWithDictionary:(NSDictionary*)dictionary;
+@property double price;
 
 
 @end

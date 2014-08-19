@@ -12,6 +12,7 @@
 @interface StockGraph : NSObject
 
 @property NSString* symbol;
+@property (strong) NSMutableArray* points;
 
 -(instancetype)initWithSymbol:(NSString*)symbol;
 
@@ -19,5 +20,8 @@
 -(void)setOpen:(double)open;
 -(void)setClose:(double)close;
 -(NSUInteger)numberOfPoints;
+
+-(double)getMinValue;
+-(double)getMaxValue;
 
 @end

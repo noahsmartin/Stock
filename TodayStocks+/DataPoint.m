@@ -10,7 +10,6 @@
 
 @interface DataPoint()
 @property int timestamp;
-@property double price;
 @end
 
 @implementation DataPoint
@@ -30,6 +29,10 @@
 
 -(long)getTimestamp {
     return _timestamp;
+}
+
+-(NSString*)description {
+    return [NSString stringWithFormat:@"%f", self.price];
 }
 
 @end
