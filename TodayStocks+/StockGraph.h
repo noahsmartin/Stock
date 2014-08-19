@@ -18,5 +18,6 @@
 -(void)addDataPoint:(DataPoint*)dataPoint;
 -(void)setOpen:(double)open;
 -(void)setClose:(double)close;
+-(NSUInteger)numberOfPoints;
 
 @end

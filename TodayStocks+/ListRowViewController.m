@@ -6,7 +6,13 @@
 //  Copyright (c) 2014 Noah Martin. All rights reserved.
 //
 
+#import "GraphView.h"
 #import "ListRowViewController.h"
+
+@interface  ListRowViewController()
+@property (weak) IBOutlet GraphView *graphView;
+
+@end
 
 @implementation ListRowViewController
 
@@ -16,8 +22,13 @@
 
 - (void)loadView {
     [super loadView];
-
     // Insert code here to customize the view
+}
+
+-(void)setRepresentedObject:(id)representedObject {
+    [super setRepresentedObject:representedObject];
+    NSLog(@"setting: %@", self.representedObject);
+    self.graphView.data = self.representedObject;
 }
 
 @end

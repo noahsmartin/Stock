@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Noah Martin. All rights reserved.
 //
 
+#import "StockGraph.h"
 #import <Foundation/Foundation.h>
 
 typedef enum _DURATION {
@@ -16,6 +17,6 @@ typedef enum _DURATION {
 
 @interface StockRequest : NSObject
 
--(void)startRequestWithSymbol:(NSString*)symbol duration:(DURATION)duration;
+-(void)startRequestWithSymbol:(NSString*)symbol duration:(DURATION)duration withBlock:(void(^)(StockGraph* menu))block;
 
 @end

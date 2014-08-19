@@ -6,8 +6,11 @@
 //  Copyright (c) 2014 Noah Martin. All rights reserved.
 //
 
+#import "StockGraph.h"
 #import <Cocoa/Cocoa.h>
 
 @interface ListRowViewController : NSViewController
+
+@property StockGraph* graph;
 
 @end

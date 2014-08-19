@@ -7,18 +7,18 @@
 //
 
 #import "StockRequest.h"
-#import "StockGraph.h"
 
 @interface StockRequest() <NSXMLParserDelegate>
 @property StockGraph* graph;
 @property bool open;
 @property bool close;
+@property (strong) void (^block)(StockGraph*);
 @end
 
 @implementation StockRequest
 
 // TODO: pass a block here to use as a callback
--(void)startRequestWithSymbol:(NSString *)symbol duration:(DURATION)duration {
+-(void)startRequestWithSymbol:(NSString *)symbol duration:(DURATION)duration withBlock:(void (^)(StockGraph *))block {
     NSString* durationString = duration == DAY ? @"1d" : @"TODO";
     NSString* urlString = @"http://iphone-wu.apple.com/dgw?imei=3806635122142816500&apptype=finance";  // TODO: figure out the imei, maybe generate this randomly
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:urlString]];
@@ -34,8 +34,8 @@
     [request setHTTPBody:[body dataUsingEncoding:NSUTF8StringEncoding]];
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         if(!connectionError) {
-            NSLog(@"finished");
-            self.graph = [[StockGraph alloc] init];
+            self.block = block;
+            self.graph = [[StockGraph alloc] initWithSymbol:symbol];
             NSXMLParser* parser = [[NSXMLParser alloc] initWithData:data];
             [parser setDelegate:self];
             [parser parse];
@@ -67,6 +67,14 @@
         self.open = NO;
     } else if([elementName isEqualToString:@"marketclose"]) {
         self.close = YES;
+    }
+}
+
+-(void)parserDidEndDocument:(NSXMLParser *)parser {
+    NSLog(@"finished");
+    NSLog(@"self.graph: %@", self.graph);
+    if(self.block) {
+    self.block(self.graph);
     }
 }
 

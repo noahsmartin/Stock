@@ -9,7 +9,7 @@
 #import "StockGraph.h"
 
 @interface StockGraph()
-@property NSMutableArray* points;
+@property (strong) NSMutableArray* points;
 
 @end
 
@@ -34,6 +34,15 @@
 
 -(void)setClose:(double)close {
     // TODO
+}
+
+-(NSUInteger)numberOfPoints {
+    NSLog(@"count: %@", self.points);
+    return self.points.count;
+}
+
+-(NSString*)description {
+    return [NSString stringWithFormat:@"symbol: %@", self.symbol];
 }
 
 @end

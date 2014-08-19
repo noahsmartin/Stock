@@ -28,9 +28,11 @@
 
     // Set up the widget list view controller.
     // The contents property should contain an object for each row in the list.
-    self.listViewController.contents = @[@"Hello World!"];
     StockRequest* request = [[StockRequest alloc] init];
-    [request startRequestWithSymbol:@"AAPL" duration:DAY];
+    [request startRequestWithSymbol:@"AAPL" duration:DAY withBlock:^(StockGraph *graph) {
+        NSLog(@"%@", graph);
+        self.listViewController.contents = @[graph];
+    }];
 }
 
 - (void)dismissViewController:(NSViewController *)viewController {
