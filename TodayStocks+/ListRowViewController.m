@@ -11,6 +11,7 @@
 
 @interface  ListRowViewController()
 @property (weak) IBOutlet GraphView *graphView;
+@property (weak) IBOutlet NSTextField *symbolName;
 
 @end
 
@@ -29,6 +30,7 @@
     [super setRepresentedObject:representedObject];
     NSLog(@"setting: %@", self.representedObject);
     self.graphView.data = self.representedObject;
+    self.symbolName.stringValue = ((StockGraph*) self.representedObject).symbol;
 }
 
 @end

@@ -15,7 +15,7 @@
 
 @property (strong) IBOutlet NCWidgetListViewController *listViewController;
 @property (strong) NCWidgetSearchViewController *searchController;
-
+@property (strong) NSMutableArray* graphs;
 @end
 
 
@@ -25,13 +25,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.graphs = [[NSMutableArray alloc] init];
 
     // Set up the widget list view controller.
     // The contents property should contain an object for each row in the list.
     StockRequest* request = [[StockRequest alloc] init];
     [request startRequestWithSymbol:@"AAPL" duration:DAY withBlock:^(StockGraph *graph) {
-        NSLog(@"%@", graph);
-        self.listViewController.contents = @[graph];
+        [self.graphs addObject:graph];
+        self.listViewController.contents = self.graphs;
+    }];
+    [request startRequestWithSymbol:@"GILD" duration:DAY withBlock:^(StockGraph *graph) {
+        [self.graphs addObject:graph];
+        self.listViewController.contents = self.graphs;
     }];
 }
 

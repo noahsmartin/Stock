@@ -8,6 +8,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="ListRowViewController">
             <connections>
                 <outlet property="graphView" destination="Yh6-5A-uor" id="5E7-uB-LHK"/>
+                <outlet property="symbolName" destination="NUb-by-DE8" id="bsW-DT-7A3"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -17,18 +18,29 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
             <subviews>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="Yh6-5A-uor" customClass="GraphView">
-                    <rect key="frame" x="0.0" y="0.0" width="300" height="80"/>
+                    <rect key="frame" x="0.0" y="5" width="290" height="70"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="80" id="SEB-ml-V7t"/>
+                        <constraint firstAttribute="height" constant="70" id="SEB-ml-V7t"/>
                     </constraints>
                 </customView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NUb-by-DE8">
+                    <rect key="frame" x="290" y="43" width="39" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="AAPL" id="mnj-rV-NeV">
+                        <font key="font" metaFont="system" size="10"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
             <constraints>
                 <constraint firstItem="Yh6-5A-uor" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="C12-5P-EQn"/>
-                <constraint firstAttribute="trailing" secondItem="Yh6-5A-uor" secondAttribute="trailing" constant="20" id="LP1-De-KWA"/>
-                <constraint firstAttribute="bottom" secondItem="Yh6-5A-uor" secondAttribute="bottom" id="h4R-cP-0MG"/>
-                <constraint firstItem="Yh6-5A-uor" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="oOA-DW-9jB"/>
+                <constraint firstAttribute="bottom" secondItem="Yh6-5A-uor" secondAttribute="bottom" constant="5" id="Hyy-xx-VCr"/>
+                <constraint firstItem="Yh6-5A-uor" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="5" id="SEb-Ox-kgG"/>
+                <constraint firstAttribute="trailing" secondItem="Yh6-5A-uor" secondAttribute="trailing" constant="30" id="kgp-Ou-a4H"/>
+                <constraint firstItem="NUb-by-DE8" firstAttribute="leading" secondItem="Yh6-5A-uor" secondAttribute="trailing" constant="2" id="m1S-Vf-c0u"/>
+                <constraint firstItem="NUb-by-DE8" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" id="yGX-Qh-UX8"/>
             </constraints>
+            <point key="canvasLocation" x="333" y="229"/>
         </customView>
     </objects>
 </document>

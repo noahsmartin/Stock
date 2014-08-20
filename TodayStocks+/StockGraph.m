@@ -44,6 +44,7 @@
 }
 
 -(double)getMaxValue {
+    // TODO: make this O(1) by just updating this as the points are added
     double max = -1;
     for(DataPoint* point in self.points) {
         if(point.price > max) {
@@ -54,6 +55,8 @@
 }
 
 -(double)getMinValue {
+    // TODO: make this O(1) by just updating this as the points are added
+
     // TODO: unhack this...
     double min = 99999999;
     for(DataPoint* point in self.points) {
