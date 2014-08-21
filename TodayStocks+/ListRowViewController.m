@@ -12,6 +12,7 @@
 @interface  ListRowViewController()
 @property (weak) IBOutlet GraphView *graphView;
 @property (weak) IBOutlet NSTextField *symbolName;
+@property (weak) IBOutlet NSTextField *changeText;
 
 @end
 
@@ -28,9 +29,10 @@
 
 -(void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];
-    NSLog(@"setting: %@", self.representedObject);
     self.graphView.data = self.representedObject;
     self.symbolName.stringValue = ((StockGraph*) self.representedObject).symbol;
+    // TODO: change this changeText to a custom UI component that has a green background if + and red if -
+    self.changeText.stringValue = [NSString stringWithFormat:@"%.2f", [((StockGraph*) self.representedObject).change doubleValue]];
 }
 
 @end

@@ -13,6 +13,7 @@
 
 @property NSString* symbol;
 @property (strong) NSMutableArray* points;
+@property (strong) NSString* change;
 
 -(instancetype)initWithSymbol:(NSString*)symbol;
 

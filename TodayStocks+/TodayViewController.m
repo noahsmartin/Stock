@@ -35,6 +35,7 @@
         [self.graphs addObject:graph];
         self.listViewController.contents = self.graphs;
     }];
+    request = [[StockRequest alloc] init];
     [request startRequestWithSymbol:@"GILD" duration:DAY withBlock:^(StockGraph *graph) {
         [self.graphs addObject:graph];
         self.listViewController.contents = self.graphs;

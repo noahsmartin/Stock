@@ -11,6 +11,4 @@
 
 @interface ListRowViewController : NSViewController
 
-@property StockGraph* graph;
-
 @end

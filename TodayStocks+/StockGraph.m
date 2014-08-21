@@ -9,6 +9,8 @@
 #import "StockGraph.h"
 
 @interface StockGraph()
+@property double open;
+@property double close;
 
 @end
 
@@ -25,14 +27,6 @@
 
 -(void)addDataPoint:(DataPoint *)dataPoint {
     [self.points addObject:dataPoint];
-}
-
--(void)setOpen:(double)open {
-    // TODO
-}
-
--(void)setClose:(double)close {
-    // TODO
 }
 
 -(NSUInteger)numberOfPoints {
