@@ -13,6 +13,7 @@
 @property (weak) IBOutlet GraphView *graphView;
 @property (weak) IBOutlet NSTextField *symbolName;
 @property (weak) IBOutlet NSTextField *changeText;
+@property (weak) IBOutlet NSView *changeTextBackground;
 
 @end
 
@@ -31,8 +32,17 @@
     [super setRepresentedObject:representedObject];
     self.graphView.data = self.representedObject;
     self.symbolName.stringValue = ((StockGraph*) self.representedObject).symbol;
-    // TODO: change this changeText to a custom UI component that has a green background if + and red if -
-    self.changeText.stringValue = [NSString stringWithFormat:@"%.2f", [((StockGraph*) self.representedObject).change doubleValue]];
+    double change = [((StockGraph*) self.representedObject).change doubleValue];
+    self.changeText.stringValue = [NSString stringWithFormat:@"%.2f", [self positiveValue:change]];
+    NSColor* color = change >= 0 ? [NSColor greenColor] : [NSColor redColor];
+    self.changeTextBackground.layer.backgroundColor = [color CGColor];
+    self.changeTextBackground.layer.cornerRadius = 3;
+}
+
+-(double)positiveValue:(double)value {
+    if(value < 0)
+        return -1 * value;
+    return value;
 }
 
 @end

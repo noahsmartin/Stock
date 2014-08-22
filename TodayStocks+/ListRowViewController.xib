@@ -8,6 +8,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="ListRowViewController">
             <connections>
                 <outlet property="changeText" destination="MiZ-We-FLG" id="ufw-R0-sBX"/>
+                <outlet property="changeTextBackground" destination="0i7-cF-ftT" id="ljl-58-fYF"/>
                 <outlet property="graphView" destination="Yh6-5A-uor" id="5E7-uB-LHK"/>
                 <outlet property="symbolName" destination="NUb-by-DE8" id="bsW-DT-7A3"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
@@ -19,22 +20,31 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
             <subviews>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="Yh6-5A-uor" customClass="GraphView">
-                    <rect key="frame" x="0.0" y="5" width="290" height="70"/>
+                    <rect key="frame" x="0.0" y="5" width="280" height="70"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="70" id="SEB-ml-V7t"/>
                     </constraints>
                 </customView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NUb-by-DE8">
-                    <rect key="frame" x="290" y="47" width="31" height="13"/>
+                    <rect key="frame" x="280" y="47" width="31" height="13"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="AAPL" id="mnj-rV-NeV">
                         <font key="font" metaFont="system" size="10"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MiZ-We-FLG">
-                    <rect key="frame" x="289" y="20" width="31" height="13"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="Nza-DW-N6T">
+                <customView wantsLayer="YES" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0i7-cF-ftT">
+                    <rect key="frame" x="282" y="20" width="29" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="29" id="ceH-qf-GXP"/>
+                    </constraints>
+                </customView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MiZ-We-FLG">
+                    <rect key="frame" x="283" y="20" width="31" height="13"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="27" id="OyV-Gf-JH2"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="Nza-DW-N6T">
                         <font key="font" metaFont="system" size="10"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -42,12 +52,14 @@
                 </textField>
             </subviews>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="0i7-cF-ftT" secondAttribute="bottom" constant="20" id="73O-j9-nKQ"/>
                 <constraint firstItem="Yh6-5A-uor" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="C12-5P-EQn"/>
                 <constraint firstAttribute="bottom" secondItem="MiZ-We-FLG" secondAttribute="bottom" constant="20" id="Hsb-SW-ej8"/>
                 <constraint firstAttribute="bottom" secondItem="Yh6-5A-uor" secondAttribute="bottom" constant="5" id="Hyy-xx-VCr"/>
                 <constraint firstItem="Yh6-5A-uor" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="5" id="SEb-Ox-kgG"/>
-                <constraint firstItem="MiZ-We-FLG" firstAttribute="leading" secondItem="Yh6-5A-uor" secondAttribute="trailing" constant="1" id="WrB-uk-OWZ"/>
-                <constraint firstAttribute="trailing" secondItem="Yh6-5A-uor" secondAttribute="trailing" constant="30" id="kgp-Ou-a4H"/>
+                <constraint firstItem="MiZ-We-FLG" firstAttribute="leading" secondItem="Yh6-5A-uor" secondAttribute="trailing" constant="3" id="WrB-uk-OWZ"/>
+                <constraint firstItem="0i7-cF-ftT" firstAttribute="leading" secondItem="Yh6-5A-uor" secondAttribute="trailing" constant="2" id="ePi-2A-qoM"/>
+                <constraint firstAttribute="trailing" secondItem="Yh6-5A-uor" secondAttribute="trailing" constant="40" id="kgp-Ou-a4H"/>
                 <constraint firstItem="NUb-by-DE8" firstAttribute="leading" secondItem="Yh6-5A-uor" secondAttribute="trailing" constant="2" id="m1S-Vf-c0u"/>
                 <constraint firstItem="NUb-by-DE8" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" id="yGX-Qh-UX8"/>
             </constraints>
