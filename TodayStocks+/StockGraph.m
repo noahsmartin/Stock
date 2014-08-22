@@ -9,8 +9,6 @@
 #import "StockGraph.h"
 
 @interface StockGraph()
-@property double open;
-@property double close;
 
 @end
 

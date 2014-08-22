@@ -14,12 +14,12 @@
 @property NSString* symbol;
 @property (strong) NSMutableArray* points;
 @property (strong) NSString* change;
+@property double open;
+@property double close;
 
 -(instancetype)initWithSymbol:(NSString*)symbol;
 
 -(void)addDataPoint:(DataPoint*)dataPoint;
--(void)setOpen:(double)open;
--(void)setClose:(double)close;
 -(NSUInteger)numberOfPoints;
 
 -(double)getMinValue;

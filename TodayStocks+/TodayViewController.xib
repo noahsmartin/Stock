@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6206.8" systemVersion="14A329f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
+        <deployment defaultVersion="101000" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6206.8"/>
     </dependencies>
     <objects>
@@ -13,12 +14,38 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView simulatedAppContext="notificationCenter" translatesAutoresizingMaskIntoConstraints="NO" id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="288"/>
+            <rect key="frame" x="0.0" y="0.0" width="317" height="288"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="vV7-Th-QGI">
+                    <rect key="frame" x="0.0" y="0.0" width="317" height="256"/>
+                </customView>
+                <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ebV-2d-INJ">
+                    <rect key="frame" x="79" y="264" width="159" height="24"/>
+                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="2gU-3p-bjs">
+                        <font key="font" metaFont="system"/>
+                        <segments>
+                            <segment label="Day" selected="YES"/>
+                            <segment label="Month" tag="1"/>
+                            <segment label="Year"/>
+                        </segments>
+                    </segmentedCell>
+                </segmentedControl>
+            </subviews>
+            <constraints>
+                <constraint firstItem="vV7-Th-QGI" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="98d-Ko-ZJw"/>
+                <constraint firstAttribute="trailing" secondItem="ebV-2d-INJ" secondAttribute="trailing" constant="81" id="LcP-AO-o8I"/>
+                <constraint firstItem="vV7-Th-QGI" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="32" id="RPs-Uc-WDU"/>
+                <constraint firstAttribute="bottom" secondItem="vV7-Th-QGI" secondAttribute="bottom" id="UPL-D5-DkS"/>
+                <constraint firstItem="ebV-2d-INJ" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="1" id="sp7-43-NJB"/>
+                <constraint firstAttribute="trailing" secondItem="vV7-Th-QGI" secondAttribute="trailing" id="tkD-zW-06g"/>
+                <constraint firstItem="ebV-2d-INJ" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="81" id="xOv-aU-SIH"/>
+            </constraints>
+            <point key="canvasLocation" x="332.5" y="228"/>
         </customView>
         <viewController id="vLu-t9-fwO" customClass="NCWidgetListViewController">
             <connections>
                 <outlet property="delegate" destination="-2" id="vCn-hJ-OcV"/>
-                <outlet property="view" destination="Hz6-mo-xeY" id="nq9-gf-VjV"/>
+                <outlet property="view" destination="vV7-Th-QGI" id="Oxv-xa-OG7"/>
             </connections>
         </viewController>
     </objects>

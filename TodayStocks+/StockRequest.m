@@ -87,7 +87,7 @@ NSString* xmlStart = @"<?xml version='1.0' encoding='utf-8'?><request devtype=\"
 }
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qualifiedName attributes:(NSDictionary *)attributeDict {
-    if([elementName isEqualToString:@"marketopen"]) {
+    if([elementName isEqualToString:@"open"]) {
         self.open = YES;
     } else if([elementName isEqualToString:@"marketclose"]) {
         self.close = YES;
@@ -99,7 +99,7 @@ NSString* xmlStart = @"<?xml version='1.0' encoding='utf-8'?><request devtype=\"
 }
 
 -(void)parser:(NSXMLParser*)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
-    if([elementName isEqualToString:@"marketopen"]) {
+    if([elementName isEqualToString:@"open"]) {
         self.open = NO;
     } else if([elementName isEqualToString:@"marketclose"]) {
         self.close = NO;
