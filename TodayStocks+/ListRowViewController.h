@@ -7,8 +7,11 @@
 //
 
 #import "StockGraph.h"
+#import "ChangeView.h"
 #import <Cocoa/Cocoa.h>
 
 @interface ListRowViewController : NSViewController
+
+-(void)setChangeDelegate:(id<ChangeViewDelegate>)delegate;
 
 @end

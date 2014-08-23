@@ -15,6 +15,7 @@ NSString* xmlStart = @"<?xml version='1.0' encoding='utf-8'?><request devtype=\"
 @property bool open;
 @property bool close;
 @property bool change;
+@property bool changePercent;
 @property (strong) void (^block)(StockGraph*);
 @property int count;
 @end
@@ -82,7 +83,8 @@ NSString* xmlStart = @"<?xml version='1.0' encoding='utf-8'?><request devtype=\"
         [self.graph setClose:[string doubleValue]];
     } else if(self.change) {
         self.graph.change = string;
-
+    } else if(self.changePercent) {
+        self.graph.changepercent = [string doubleValue];
     }
 }
 
@@ -95,6 +97,8 @@ NSString* xmlStart = @"<?xml version='1.0' encoding='utf-8'?><request devtype=\"
         [self.graph addDataPoint:[[DataPoint alloc] initWithDictionary:attributeDict]];
     } else if([elementName isEqualToString:@"change"]) {
         self.change = YES;
+    } else if([elementName isEqualToString:@"changepercent"]) {
+        self.changePercent = YES;
     }
 }
 
@@ -105,6 +109,8 @@ NSString* xmlStart = @"<?xml version='1.0' encoding='utf-8'?><request devtype=\"
         self.close = NO;
     } else if([elementName isEqualToString:@"change"]) {
         self.change = NO;
+    } else if([elementName isEqualToString:@"changepercent"]) {
+        self.changePercent = NO;
     }
 }
 

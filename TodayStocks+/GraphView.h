@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "StockGraph.h"
+#import "ChangeView.h"
 
 @interface GraphView : NSView
 

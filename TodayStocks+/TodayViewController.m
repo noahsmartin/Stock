@@ -9,9 +9,10 @@
 #import "TodayViewController.h"
 #import "ListRowViewController.h"
 #import "StockRequest.h"
+#import "ChangeView.h"
 #import <NotificationCenter/NotificationCenter.h>
 
-@interface TodayViewController () <NCWidgetProviding, NCWidgetListViewDelegate, NCWidgetSearchViewDelegate>
+@interface TodayViewController () <NCWidgetProviding, NCWidgetListViewDelegate, NCWidgetSearchViewDelegate, ChangeViewDelegate>
 
 @property (strong) IBOutlet NCWidgetListViewController *listViewController;
 @property (strong) NCWidgetSearchViewController *searchController;
@@ -93,7 +94,9 @@
     // Return a new view controller subclass for displaying an item of widget
     // content. The NCWidgetListViewController will set the representedObject
     // of this view controller to one of the objects in its contents array.
-    return [[ListRowViewController alloc] init];
+    ListRowViewController* controller = [[ListRowViewController alloc] init];
+    [controller setChangeDelegate:self];
+    return controller;
 }
 
 - (void)widgetListPerformAddAction:(NCWidgetListViewController *)list {
@@ -140,6 +143,14 @@
 
 - (void)widgetSearch:(NCWidgetSearchViewController *)searchController resultSelected:(id)object {
     // The user has selected a search result from the list.
+}
+
+#pragma mark - ChangeViewDelegate
+
+-(void)clicked {
+    for(int i = 0; i < self.listViewController.contents.count; i++) {
+        [[self.listViewController viewControllerAtRow:i makeIfNecessary:NO] performSelector:@selector(clicked)];
+    }
 }
 
 @end

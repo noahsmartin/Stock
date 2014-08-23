@@ -14,6 +14,7 @@
 @property NSString* symbol;
 @property (strong) NSMutableArray* points;
 @property (strong) NSString* change;
+@property double changepercent;
 @property double open;
 @property double close;
 

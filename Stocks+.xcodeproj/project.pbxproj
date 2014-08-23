@@ -22,6 +22,7 @@
 		4FAFF6FE199EEE9B00B4D55E /* ListRowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FAFF6FD199EEE9B00B4D55E /* ListRowViewController.xib */; };
 		4FAFF701199EEE9B00B4D55E /* TodayStocks+.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4FAFF6EA199EEE9B00B4D55E /* TodayStocks+.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4FAFF70A199EEECE00B4D55E /* StockRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAFF709199EEECE00B4D55E /* StockRequest.m */; };
+		4FF2142F19A85A06003B6E9D /* ChangeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2142E19A85A06003B6E9D /* ChangeView.m */; };
 		4FF727DC19A314180016B079 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF727DB19A314180016B079 /* GraphView.m */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,8 @@
 		4FAFF6FD199EEE9B00B4D55E /* ListRowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListRowViewController.xib; sourceTree = "<group>"; };
 		4FAFF708199EEECE00B4D55E /* StockRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockRequest.h; sourceTree = "<group>"; };
 		4FAFF709199EEECE00B4D55E /* StockRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockRequest.m; sourceTree = "<group>"; };
+		4FF2142D19A85A06003B6E9D /* ChangeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeView.h; sourceTree = "<group>"; };
+		4FF2142E19A85A06003B6E9D /* ChangeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeView.m; sourceTree = "<group>"; };
 		4FF727DA19A314180016B079 /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
 		4FF727DB19A314180016B079 /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -197,6 +200,8 @@
 				4FAFF6F9199EEE9B00B4D55E /* ListRowViewController.m */,
 				4FAFF708199EEECE00B4D55E /* StockRequest.h */,
 				4FAFF709199EEECE00B4D55E /* StockRequest.m */,
+				4FF2142D19A85A06003B6E9D /* ChangeView.h */,
+				4FF2142E19A85A06003B6E9D /* ChangeView.m */,
 				4FF727DA19A314180016B079 /* GraphView.h */,
 				4FF727DB19A314180016B079 /* GraphView.m */,
 				4F3F9AC819A0FE4C00CA9D87 /* StockGraph.h */,
@@ -373,6 +378,7 @@
 				4FAFF6F7199EEE9B00B4D55E /* TodayViewController.m in Sources */,
 				4F3F9ACA19A0FE4C00CA9D87 /* StockGraph.m in Sources */,
 				4FAFF70A199EEECE00B4D55E /* StockRequest.m in Sources */,
+				4FF2142F19A85A06003B6E9D /* ChangeView.m in Sources */,
 				4FF727DC19A314180016B079 /* GraphView.m in Sources */,
 				4F2502B319A01DA60015FDA7 /* DataPoint.m in Sources */,
 				4FAFF6FA199EEE9B00B4D55E /* ListRowViewController.m in Sources */,
