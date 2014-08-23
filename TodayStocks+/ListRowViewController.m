@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 Noah Martin. All rights reserved.
 //
 
-#import "GraphView.h"
 #import "ListRowViewController.h"
 
 @interface  ListRowViewController()
@@ -43,6 +42,10 @@
 -(void)clicked {
     self.percent = !self.percent;
     [self setText];
+}
+
+-(void)setColorCoded:(BOOL)colorCoded {
+    self.graphView.colorCoded = colorCoded;
 }
 
 -(void)setText {

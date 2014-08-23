@@ -13,5 +13,6 @@
 @interface GraphView : NSView
 
 @property StockGraph* data;
+@property (nonatomic) BOOL colorCoded;
 
 @end

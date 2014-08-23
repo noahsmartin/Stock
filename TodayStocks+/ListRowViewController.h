@@ -6,12 +6,12 @@
 //  Copyright (c) 2014 Noah Martin. All rights reserved.
 //
 
-#import "StockGraph.h"
-#import "ChangeView.h"
+#import "StockKit.h"
 #import <Cocoa/Cocoa.h>
 
 @interface ListRowViewController : NSViewController
 
 -(void)setChangeDelegate:(id<ChangeViewDelegate>)delegate;
+-(void)setColorCoded:(BOOL)colorCoded;
 
 @end

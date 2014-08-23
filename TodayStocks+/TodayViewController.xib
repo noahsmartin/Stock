@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6206.8" systemVersion="14A329f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="101000" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6206.8"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="TodayViewController">
             <connections>
+                <outlet property="colorCodedButton" destination="IaY-lk-wGf" id="Pnr-o5-OFK"/>
+                <outlet property="durationControl" destination="ebV-2d-INJ" id="RUj-fq-QEF"/>
                 <outlet property="listViewController" destination="vLu-t9-fwO" id="cso-Rh-DC1"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
@@ -30,11 +31,23 @@
                         </segments>
                     </segmentedCell>
                 </segmentedControl>
+                <button misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IaY-lk-wGf">
+                    <rect key="frame" x="84" y="271" width="148" height="18"/>
+                    <buttonCell key="cell" type="check" title="Color-coded Graph" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Mbr-sc-YdT">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="colorCodedClicked:" target="-2" id="kNZ-f7-7Ia"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
+                <constraint firstItem="IaY-lk-wGf" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="1" id="4dR-1l-iGx"/>
                 <constraint firstItem="vV7-Th-QGI" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="98d-Ko-ZJw"/>
                 <constraint firstAttribute="trailing" secondItem="ebV-2d-INJ" secondAttribute="trailing" constant="81" id="LcP-AO-o8I"/>
                 <constraint firstItem="vV7-Th-QGI" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="32" id="RPs-Uc-WDU"/>
+                <constraint firstItem="IaY-lk-wGf" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="86" id="T1X-wf-jHM"/>
                 <constraint firstAttribute="bottom" secondItem="vV7-Th-QGI" secondAttribute="bottom" id="UPL-D5-DkS"/>
                 <constraint firstItem="ebV-2d-INJ" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="1" id="sp7-43-NJB"/>
                 <constraint firstAttribute="trailing" secondItem="vV7-Th-QGI" secondAttribute="trailing" id="tkD-zW-06g"/>

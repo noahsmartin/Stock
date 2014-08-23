@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>StockKit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>StockKitTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>Stocks+.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -17,6 +27,21 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>4F35FD0219A8EEC900AA273B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4F35FD0C19A8EEC900AA273B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4F35FD1E19A8F10700AA273B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4FAFF6C2199EEE0500B4D55E</key>
 		<dict>
 			<key>primary</key>

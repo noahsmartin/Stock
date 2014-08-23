@@ -8,14 +8,15 @@
 
 #import "TodayViewController.h"
 #import "ListRowViewController.h"
-#import "StockRequest.h"
-#import "ChangeView.h"
+#import "StockKit.h"
 #import <NotificationCenter/NotificationCenter.h>
 
 @interface TodayViewController () <NCWidgetProviding, NCWidgetListViewDelegate, NCWidgetSearchViewDelegate, ChangeViewDelegate>
 
 @property (strong) IBOutlet NCWidgetListViewController *listViewController;
 @property (strong) NCWidgetSearchViewController *searchController;
+@property (weak) IBOutlet NSButton *colorCodedButton;
+@property (weak) IBOutlet NSSegmentedControl *durationControl;
 @property (strong) NSMutableArray* graphs;
 @end
 
@@ -41,6 +42,8 @@
         [self.graphs addObject:graph];
         self.listViewController.contents = self.graphs;
     }];
+    self.durationControl.hidden = NO;
+    self.colorCodedButton.hidden = YES;
 }
 
 - (void)dismissViewController:(NSViewController *)viewController {
@@ -79,6 +82,8 @@
     // The user has clicked the edit button.
     // Put the list view into editing mode.
     self.listViewController.editing = YES;
+    [[self.durationControl animator] setHidden:YES];
+    [[self.colorCodedButton animator] setHidden:NO];
 }
 
 - (void)widgetDidEndEditing {
@@ -86,6 +91,8 @@
     // or the Notification Center has been closed.
     // Take the list view out of editing mode.
     self.listViewController.editing = NO;
+    [[self.durationControl animator] setHidden:NO];
+    [[self.colorCodedButton animator] setHidden:YES];
 }
 
 #pragma mark - NCWidgetListViewDelegate
@@ -150,6 +157,12 @@
 -(void)clicked {
     for(int i = 0; i < self.listViewController.contents.count; i++) {
         [[self.listViewController viewControllerAtRow:i makeIfNecessary:NO] performSelector:@selector(clicked)];
+    }
+}
+
+- (IBAction)colorCodedClicked:(id)sender {
+    for(int i = 0; i < self.listViewController.contents.count; i++) {
+        [(ListRowViewController*) [self.listViewController viewControllerAtRow:i makeIfNecessary:NO] setColorCoded:[sender state] == NSOnState];
     }
 }
 

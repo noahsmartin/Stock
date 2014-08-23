@@ -10,6 +10,11 @@
 
 @implementation GraphView
 
+-(instancetype)initWithFrame:(NSRect)frameRect {
+    _colorCoded = YES;
+    return [super initWithFrame:frameRect];
+}
+
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
     NSRect bounds = self.bounds;
@@ -31,10 +36,14 @@
         point.x = i*pointSpacing;
         NSPoint point2 = [self cordsForDataPoint:[self.data.points objectAtIndex:i+1]];
         point2.x = (i+1)*pointSpacing;
-        if(((DataPoint*) [self.data.points objectAtIndex:i]).price < self.data.open) {
-            [[NSColor redColor] setStroke];
+        if(self.colorCoded) {
+            if(((DataPoint*) [self.data.points objectAtIndex:i]).price < self.data.open) {
+                [[NSColor redColor] setStroke];
+            } else {
+                [[NSColor greenColor] setStroke];
+            }
         } else {
-            [[NSColor greenColor] setStroke];
+            [[NSColor whiteColor] setStroke];
         }
         path = [[NSBezierPath alloc] init];
         [path setLineWidth:0];
@@ -60,9 +69,11 @@
          NSGradient* fillGradient = [[NSGradient alloc] initWithStartingColor:[NSColor colorWithCalibratedRed:0.35 green:0.35 blue:0.35 alpha:0.5] endingColor:[NSColor colorWithCalibratedRed:0.15 green:0.15 blue:0.15 alpha:0.5]];
         [fillGradient drawInBezierPath:path angle:90];
     }
-    
-    
-    // Drawing code here.
+}
+
+-(void)setColorCoded:(BOOL)colorCoded {
+    _colorCoded = colorCoded;
+    [self setNeedsDisplay:YES];
 }
 
 -(NSPoint)cordsForDataPoint:(DataPoint*)point {

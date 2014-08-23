@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "0600"
-   wasCreatedForAppExtension = "YES"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -10,28 +9,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4FAFF6E9199EEE9B00B4D55E"
-               BuildableName = "TodayStocks+.appex"
-               BlueprintName = "TodayStocks+"
-               ReferencedContainer = "container:Stocks+.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4FAFF6C2199EEE0500B4D55E"
-               BuildableName = "Stocks+.app"
-               BlueprintName = "Stocks+"
+               BlueprintIdentifier = "4F35FD0C19A8EEC900AA273B"
+               BuildableName = "StockKitTests.xctest"
+               BlueprintName = "StockKitTests"
                ReferencedContainer = "container:Stocks+.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -43,36 +28,42 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4F35FD0C19A8EEC900AA273B"
+               BuildableName = "StockKitTests.xctest"
+               BlueprintName = "StockKitTests"
+               ReferencedContainer = "container:Stocks+.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4FAFF6E9199EEE9B00B4D55E"
-            BuildableName = "TodayStocks+.appex"
-            BlueprintName = "TodayStocks+"
+            BlueprintIdentifier = "4F35FD0C19A8EEC900AA273B"
+            BuildableName = "StockKitTests.xctest"
+            BlueprintName = "StockKitTests"
             ReferencedContainer = "container:Stocks+.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
    <LaunchAction
-      selectedDebuggerIdentifier = ""
-      selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
-      askForAppToLaunch = "Yes"
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <PathRunnable
-         FilePath = "/System/Library/Frameworks/NotificationCenter.framework/Versions/A/Resources/Widget Simulator.app">
-      </PathRunnable>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4FAFF6C2199EEE0500B4D55E"
-            BuildableName = "Stocks+.app"
-            BlueprintName = "Stocks+"
+            BlueprintIdentifier = "4F35FD0C19A8EEC900AA273B"
+            BuildableName = "StockKitTests.xctest"
+            BlueprintName = "StockKitTests"
             ReferencedContainer = "container:Stocks+.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -84,17 +75,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
-      debugDocumentVersioning = "YES"
-      askForAppToLaunch = "Yes">
-      <BuildableProductRunnable>
+      debugDocumentVersioning = "YES">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4FAFF6C2199EEE0500B4D55E"
-            BuildableName = "Stocks+.app"
-            BlueprintName = "Stocks+"
+            BlueprintIdentifier = "4F35FD0C19A8EEC900AA273B"
+            BuildableName = "StockKitTests.xctest"
+            BlueprintName = "StockKitTests"
             ReferencedContainer = "container:Stocks+.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

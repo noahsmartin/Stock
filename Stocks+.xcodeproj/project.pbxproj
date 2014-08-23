@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4F2502B319A01DA60015FDA7 /* DataPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2502B219A01DA60015FDA7 /* DataPoint.m */; };
+		4F35FD0819A8EEC900AA273B /* StockKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F35FD0719A8EEC900AA273B /* StockKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F35FD1219A8EEC900AA273B /* StockKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F35FD1119A8EEC900AA273B /* StockKitTests.m */; };
 		4F3F9ACA19A0FE4C00CA9D87 /* StockGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3F9AC919A0FE4C00CA9D87 /* StockGraph.m */; };
 		4FAFF6C9199EEE0500B4D55E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAFF6C8199EEE0500B4D55E /* main.m */; };
 		4FAFF6CC199EEE0500B4D55E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAFF6CB199EEE0500B4D55E /* AppDelegate.m */; };
@@ -65,10 +67,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4F2502B119A01DA60015FDA7 /* DataPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataPoint.h; sourceTree = "<group>"; };
-		4F2502B219A01DA60015FDA7 /* DataPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataPoint.m; sourceTree = "<group>"; };
-		4F3F9AC819A0FE4C00CA9D87 /* StockGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockGraph.h; sourceTree = "<group>"; };
-		4F3F9AC919A0FE4C00CA9D87 /* StockGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockGraph.m; sourceTree = "<group>"; };
+		4F2502B119A01DA60015FDA7 /* DataPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataPoint.h; path = "../TodayStocks+/DataPoint.h"; sourceTree = "<group>"; };
+		4F2502B219A01DA60015FDA7 /* DataPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataPoint.m; path = "../TodayStocks+/DataPoint.m"; sourceTree = "<group>"; };
+		4F35FD0319A8EEC900AA273B /* StockKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StockKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F35FD0619A8EEC900AA273B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F35FD0719A8EEC900AA273B /* StockKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StockKit.h; sourceTree = "<group>"; };
+		4F35FD0D19A8EEC900AA273B /* StockKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StockKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F35FD1019A8EEC900AA273B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F35FD1119A8EEC900AA273B /* StockKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StockKitTests.m; sourceTree = "<group>"; };
+		4F3F9AC819A0FE4C00CA9D87 /* StockGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StockGraph.h; path = "../TodayStocks+/StockGraph.h"; sourceTree = "<group>"; };
+		4F3F9AC919A0FE4C00CA9D87 /* StockGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StockGraph.m; path = "../TodayStocks+/StockGraph.m"; sourceTree = "<group>"; };
 		4FAFF6C3199EEE0500B4D55E /* Stocks+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stocks+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FAFF6C7199EEE0500B4D55E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FAFF6C8199EEE0500B4D55E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -90,15 +98,29 @@
 		4FAFF6F9199EEE9B00B4D55E /* ListRowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListRowViewController.m; sourceTree = "<group>"; };
 		4FAFF6FB199EEE9B00B4D55E /* TodayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayViewController.xib; sourceTree = "<group>"; };
 		4FAFF6FD199EEE9B00B4D55E /* ListRowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListRowViewController.xib; sourceTree = "<group>"; };
-		4FAFF708199EEECE00B4D55E /* StockRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockRequest.h; sourceTree = "<group>"; };
-		4FAFF709199EEECE00B4D55E /* StockRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockRequest.m; sourceTree = "<group>"; };
-		4FF2142D19A85A06003B6E9D /* ChangeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeView.h; sourceTree = "<group>"; };
-		4FF2142E19A85A06003B6E9D /* ChangeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeView.m; sourceTree = "<group>"; };
-		4FF727DA19A314180016B079 /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
-		4FF727DB19A314180016B079 /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
+		4FAFF708199EEECE00B4D55E /* StockRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StockRequest.h; path = "../TodayStocks+/StockRequest.h"; sourceTree = "<group>"; };
+		4FAFF709199EEECE00B4D55E /* StockRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StockRequest.m; path = "../TodayStocks+/StockRequest.m"; sourceTree = "<group>"; };
+		4FF2142D19A85A06003B6E9D /* ChangeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChangeView.h; path = "../TodayStocks+/ChangeView.h"; sourceTree = "<group>"; };
+		4FF2142E19A85A06003B6E9D /* ChangeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChangeView.m; path = "../TodayStocks+/ChangeView.m"; sourceTree = "<group>"; };
+		4FF727DA19A314180016B079 /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphView.h; path = "../TodayStocks+/GraphView.h"; sourceTree = "<group>"; };
+		4FF727DB19A314180016B079 /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphView.m; path = "../TodayStocks+/GraphView.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4F35FCFF19A8EEC900AA273B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F35FD0A19A8EEC900AA273B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4FAFF6C0199EEE0500B4D55E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,12 +146,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F35FD0419A8EEC900AA273B /* StockKit */ = {
+			isa = PBXGroup;
+			children = (
+				4F35FD1A19A8EF7D00AA273B /* View */,
+				4F35FD1919A8EF0A00AA273B /* Model */,
+				4F35FD0719A8EEC900AA273B /* StockKit.h */,
+				4F35FD0519A8EEC900AA273B /* Supporting Files */,
+			);
+			path = StockKit;
+			sourceTree = "<group>";
+		};
+		4F35FD0519A8EEC900AA273B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4F35FD0619A8EEC900AA273B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4F35FD0E19A8EEC900AA273B /* StockKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				4F35FD1119A8EEC900AA273B /* StockKitTests.m */,
+				4F35FD0F19A8EEC900AA273B /* Supporting Files */,
+			);
+			path = StockKitTests;
+			sourceTree = "<group>";
+		};
+		4F35FD0F19A8EEC900AA273B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4F35FD1019A8EEC900AA273B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4F35FD1919A8EF0A00AA273B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4F2502B119A01DA60015FDA7 /* DataPoint.h */,
+				4F2502B219A01DA60015FDA7 /* DataPoint.m */,
+				4F3F9AC819A0FE4C00CA9D87 /* StockGraph.h */,
+				4F3F9AC919A0FE4C00CA9D87 /* StockGraph.m */,
+				4FAFF708199EEECE00B4D55E /* StockRequest.h */,
+				4FAFF709199EEECE00B4D55E /* StockRequest.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4F35FD1A19A8EF7D00AA273B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4FF727DA19A314180016B079 /* GraphView.h */,
+				4FF727DB19A314180016B079 /* GraphView.m */,
+				4FF2142D19A85A06003B6E9D /* ChangeView.h */,
+				4FF2142E19A85A06003B6E9D /* ChangeView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		4FAFF6BA199EEE0500B4D55E = {
 			isa = PBXGroup;
 			children = (
 				4FAFF6C5199EEE0500B4D55E /* Stocks+ */,
 				4FAFF6D9199EEE0600B4D55E /* Stocks+Tests */,
 				4FAFF6EE199EEE9B00B4D55E /* TodayStocks+ */,
+				4F35FD0419A8EEC900AA273B /* StockKit */,
+				4F35FD0E19A8EEC900AA273B /* StockKitTests */,
 				4FAFF6EB199EEE9B00B4D55E /* Frameworks */,
 				4FAFF6C4199EEE0500B4D55E /* Products */,
 			);
@@ -141,6 +225,8 @@
 				4FAFF6C3199EEE0500B4D55E /* Stocks+.app */,
 				4FAFF6D6199EEE0600B4D55E /* Stocks+Tests.xctest */,
 				4FAFF6EA199EEE9B00B4D55E /* TodayStocks+.appex */,
+				4F35FD0319A8EEC900AA273B /* StockKit.framework */,
+				4F35FD0D19A8EEC900AA273B /* StockKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -198,16 +284,6 @@
 				4FAFF6F6199EEE9B00B4D55E /* TodayViewController.m */,
 				4FAFF6F8199EEE9B00B4D55E /* ListRowViewController.h */,
 				4FAFF6F9199EEE9B00B4D55E /* ListRowViewController.m */,
-				4FAFF708199EEECE00B4D55E /* StockRequest.h */,
-				4FAFF709199EEECE00B4D55E /* StockRequest.m */,
-				4FF2142D19A85A06003B6E9D /* ChangeView.h */,
-				4FF2142E19A85A06003B6E9D /* ChangeView.m */,
-				4FF727DA19A314180016B079 /* GraphView.h */,
-				4FF727DB19A314180016B079 /* GraphView.m */,
-				4F3F9AC819A0FE4C00CA9D87 /* StockGraph.h */,
-				4F3F9AC919A0FE4C00CA9D87 /* StockGraph.m */,
-				4F2502B119A01DA60015FDA7 /* DataPoint.h */,
-				4F2502B219A01DA60015FDA7 /* DataPoint.m */,
 				4FAFF6FB199EEE9B00B4D55E /* TodayViewController.xib */,
 				4FAFF6FD199EEE9B00B4D55E /* ListRowViewController.xib */,
 				4FAFF6EF199EEE9B00B4D55E /* Supporting Files */,
@@ -227,7 +303,53 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		4F35FD0019A8EEC900AA273B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F35FD0819A8EEC900AA273B /* StockKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		4F35FD0219A8EEC900AA273B /* StockKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F35FD1719A8EEC900AA273B /* Build configuration list for PBXNativeTarget "StockKit" */;
+			buildPhases = (
+				4F35FCFE19A8EEC900AA273B /* Sources */,
+				4F35FCFF19A8EEC900AA273B /* Frameworks */,
+				4F35FD0019A8EEC900AA273B /* Headers */,
+				4F35FD0119A8EEC900AA273B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StockKit;
+			productName = StockKit;
+			productReference = 4F35FD0319A8EEC900AA273B /* StockKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4F35FD0C19A8EEC900AA273B /* StockKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F35FD1819A8EEC900AA273B /* Build configuration list for PBXNativeTarget "StockKitTests" */;
+			buildPhases = (
+				4F35FD0919A8EEC900AA273B /* Sources */,
+				4F35FD0A19A8EEC900AA273B /* Frameworks */,
+				4F35FD0B19A8EEC900AA273B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StockKitTests;
+			productName = StockKitTests;
+			productReference = 4F35FD0D19A8EEC900AA273B /* StockKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4FAFF6C2199EEE0500B4D55E /* Stocks+ */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FAFF6E0199EEE0600B4D55E /* Build configuration list for PBXNativeTarget "Stocks+" */;
@@ -292,6 +414,12 @@
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Noah Martin";
 				TargetAttributes = {
+					4F35FD0219A8EEC900AA273B = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					4F35FD0C19A8EEC900AA273B = {
+						CreatedOnToolsVersion = 6.0;
+					};
 					4FAFF6C2199EEE0500B4D55E = {
 						CreatedOnToolsVersion = 6.0;
 					};
@@ -320,11 +448,27 @@
 				4FAFF6C2199EEE0500B4D55E /* Stocks+ */,
 				4FAFF6D5199EEE0600B4D55E /* Stocks+Tests */,
 				4FAFF6E9199EEE9B00B4D55E /* TodayStocks+ */,
+				4F35FD0219A8EEC900AA273B /* StockKit */,
+				4F35FD0C19A8EEC900AA273B /* StockKitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4F35FD0119A8EEC900AA273B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F35FD0B19A8EEC900AA273B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4FAFF6C1199EEE0500B4D55E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -354,6 +498,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4F35FCFE19A8EEC900AA273B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F35FD0919A8EEC900AA273B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F35FD1219A8EEC900AA273B /* StockKitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4FAFF6BF199EEE0500B4D55E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -425,6 +584,84 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4F35FD1319A8EEC900AA273B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = StockKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4F35FD1419A8EEC900AA273B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = StockKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4F35FD1519A8EEC900AA273B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = StockKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4F35FD1619A8EEC900AA273B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = StockKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		4FAFF6DE199EEE0600B4D55E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -592,6 +829,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4F35FD1719A8EEC900AA273B /* Build configuration list for PBXNativeTarget "StockKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F35FD1319A8EEC900AA273B /* Debug */,
+				4F35FD1419A8EEC900AA273B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4F35FD1819A8EEC900AA273B /* Build configuration list for PBXNativeTarget "StockKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F35FD1519A8EEC900AA273B /* Debug */,
+				4F35FD1619A8EEC900AA273B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		4FAFF6BE199EEE0500B4D55E /* Build configuration list for PBXProject "Stocks+" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
