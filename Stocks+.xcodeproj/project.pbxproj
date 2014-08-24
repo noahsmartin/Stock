@@ -24,6 +24,7 @@
 		4FAFF6FE199EEE9B00B4D55E /* ListRowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FAFF6FD199EEE9B00B4D55E /* ListRowViewController.xib */; };
 		4FAFF701199EEE9B00B4D55E /* TodayStocks+.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4FAFF6EA199EEE9B00B4D55E /* TodayStocks+.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4FAFF70A199EEECE00B4D55E /* StockRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAFF709199EEECE00B4D55E /* StockRequest.m */; };
+		4FC3CCCF19AA5F06002AFB54 /* SymbolSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC3CCCE19AA5F06002AFB54 /* SymbolSearch.m */; };
 		4FF2142F19A85A06003B6E9D /* ChangeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2142E19A85A06003B6E9D /* ChangeView.m */; };
 		4FF727DC19A314180016B079 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF727DB19A314180016B079 /* GraphView.m */; };
 /* End PBXBuildFile section */
@@ -100,6 +101,8 @@
 		4FAFF6FD199EEE9B00B4D55E /* ListRowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListRowViewController.xib; sourceTree = "<group>"; };
 		4FAFF708199EEECE00B4D55E /* StockRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StockRequest.h; path = "../TodayStocks+/StockRequest.h"; sourceTree = "<group>"; };
 		4FAFF709199EEECE00B4D55E /* StockRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StockRequest.m; path = "../TodayStocks+/StockRequest.m"; sourceTree = "<group>"; };
+		4FC3CCCD19AA5F06002AFB54 /* SymbolSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymbolSearch.h; sourceTree = "<group>"; };
+		4FC3CCCE19AA5F06002AFB54 /* SymbolSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SymbolSearch.m; sourceTree = "<group>"; };
 		4FF2142D19A85A06003B6E9D /* ChangeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChangeView.h; path = "../TodayStocks+/ChangeView.h"; sourceTree = "<group>"; };
 		4FF2142E19A85A06003B6E9D /* ChangeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChangeView.m; path = "../TodayStocks+/ChangeView.m"; sourceTree = "<group>"; };
 		4FF727DA19A314180016B079 /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphView.h; path = "../TodayStocks+/GraphView.h"; sourceTree = "<group>"; };
@@ -287,6 +290,8 @@
 				4FAFF6FB199EEE9B00B4D55E /* TodayViewController.xib */,
 				4FAFF6FD199EEE9B00B4D55E /* ListRowViewController.xib */,
 				4FAFF6EF199EEE9B00B4D55E /* Supporting Files */,
+				4FC3CCCD19AA5F06002AFB54 /* SymbolSearch.h */,
+				4FC3CCCE19AA5F06002AFB54 /* SymbolSearch.m */,
 			);
 			path = "TodayStocks+";
 			sourceTree = "<group>";
@@ -539,6 +544,7 @@
 				4FAFF70A199EEECE00B4D55E /* StockRequest.m in Sources */,
 				4FF2142F19A85A06003B6E9D /* ChangeView.m in Sources */,
 				4FF727DC19A314180016B079 /* GraphView.m in Sources */,
+				4FC3CCCF19AA5F06002AFB54 /* SymbolSearch.m in Sources */,
 				4F2502B319A01DA60015FDA7 /* DataPoint.m in Sources */,
 				4FAFF6FA199EEE9B00B4D55E /* ListRowViewController.m in Sources */,
 			);
@@ -602,6 +608,7 @@
 				INFOPLIST_FILE = StockKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -623,6 +630,7 @@
 				INFOPLIST_FILE = StockKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -836,6 +844,7 @@
 				4F35FD1419A8EEC900AA273B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4F35FD1819A8EEC900AA273B /* Build configuration list for PBXNativeTarget "StockKitTests" */ = {
 			isa = XCConfigurationList;
@@ -844,6 +853,7 @@
 				4F35FD1619A8EEC900AA273B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4FAFF6BE199EEE0500B4D55E /* Build configuration list for PBXProject "Stocks+" */ = {
 			isa = XCConfigurationList;

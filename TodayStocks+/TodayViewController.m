@@ -8,7 +8,7 @@
 
 #import "TodayViewController.h"
 #import "ListRowViewController.h"
-#import "StockKit.h"
+#import "SymbolSearch.h"
 #import <NotificationCenter/NotificationCenter.h>
 
 @interface TodayViewController () <NCWidgetProviding, NCWidgetListViewDelegate, NCWidgetSearchViewDelegate, ChangeViewDelegate>
@@ -18,6 +18,7 @@
 @property (weak) IBOutlet NSButton *colorCodedButton;
 @property (weak) IBOutlet NSSegmentedControl *durationControl;
 @property (strong) NSMutableArray* graphs;
+@property (strong) SymbolSearch* symbolSearch;
 @end
 
 
@@ -44,6 +45,7 @@
     }];
     self.durationControl.hidden = NO;
     self.colorCodedButton.hidden = YES;
+    self.symbolSearch = [[SymbolSearch alloc] init];
 }
 
 - (void)dismissViewController:(NSViewController *)viewController {
@@ -111,6 +113,7 @@
     // Display a search controller for adding new content to the widget.
     self.searchController = [[NCWidgetSearchViewController alloc] init];
     self.searchController.delegate = self;
+    self.searchController.searchDescription = @"Search for a company symbol";
 
     // Present the search view controller with an animation.
     // Implement dismissViewController to observe when the view controller
@@ -140,7 +143,11 @@
 
 - (void)widgetSearch:(NCWidgetSearchViewController *)searchController searchForTerm:(NSString *)searchTerm maxResults:(NSUInteger)max {
     // The user has entered a search term. Set the controller's searchResults property to the matching items.
-    searchController.searchResults = @[];
+    searchController.searchResultsPlaceholderString = @"Loading...";
+    [self.symbolSearch lookupSymbol:searchTerm withBlock:^(NSArray* results) {
+        searchController.searchResults = results;
+        searchController.searchResultsPlaceholderString = @"No results";
+    }];
 }
 
 - (void)widgetSearchTermCleared:(NCWidgetSearchViewController *)searchController {
@@ -150,6 +157,11 @@
 
 - (void)widgetSearch:(NCWidgetSearchViewController *)searchController resultSelected:(id)object {
     // The user has selected a search result from the list.
+    StockRequest* request = [[StockRequest alloc] init];
+    [request startRequestWithSymbol:object duration:DAY withBlock:^(StockGraph *graph) {
+        [self.graphs addObject:graph];
+        self.listViewController.contents = self.graphs;
+    }];
 }
 
 #pragma mark - ChangeViewDelegate
