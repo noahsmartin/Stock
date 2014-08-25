@@ -32,22 +32,44 @@
         [path stroke];
     }
     for(int i = 0; i < count-1; i++) {
-        NSPoint point = [self cordsForDataPoint:[self.data.points objectAtIndex:i]];
+        DataPoint* data1 = ((DataPoint*) [self.data.points objectAtIndex:i]);
+        DataPoint* data2 = ((DataPoint*) [self.data.points objectAtIndex:i+1]);
+        NSPoint point = [self cordsForDataPoint:data1];
         point.x = i*pointSpacing;
-        NSPoint point2 = [self cordsForDataPoint:[self.data.points objectAtIndex:i+1]];
+        NSPoint point2 = [self cordsForDataPoint:data2];
         point2.x = (i+1)*pointSpacing;
+        path = [[NSBezierPath alloc] init];
+        [path moveToPoint:point];
         if(self.colorCoded) {
-            if(((DataPoint*) [self.data.points objectAtIndex:i]).price < self.data.open) {
+            if(data1.price < self.data.open && data2.price < self.data.open) {
                 [[NSColor redColor] setStroke];
-            } else {
+            } else if(data1.price < self.data.open) {
+                [[NSColor redColor] setStroke];
+                NSPoint changePoint = [self cordsForDataPointPrice:self.data.open];
+                double slopeInverse = (point2.x - point.x) / (point2.y - point.y);
+                changePoint.x = point.x + (changePoint.y - point.y) * slopeInverse;
+                [path lineToPoint:changePoint];
+                [path stroke];
+                path = [[NSBezierPath alloc] init];
+                [path moveToPoint:changePoint];
+                [[NSColor greenColor] setStroke];
+            } else if(data2.price < self.data.open) {
+                [[NSColor greenColor] setStroke];
+                NSPoint changePoint = [self cordsForDataPointPrice:self.data.open];
+                double slopeInverse = (point2.x - point.x) / (point2.y - point.y);
+                changePoint.x = point.x + (changePoint.y - point.y) * slopeInverse;
+                [path lineToPoint:changePoint];
+                [path stroke];
+                path = [[NSBezierPath alloc] init];
+                [path moveToPoint:changePoint];
+                [[NSColor redColor] setStroke];
+            }else {
                 [[NSColor greenColor] setStroke];
             }
         } else {
             [[NSColor whiteColor] setStroke];
         }
-        path = [[NSBezierPath alloc] init];
         [path setLineWidth:0];
-        [path moveToPoint:point];
         [path lineToPoint:point2];
         [path stroke];
     }
@@ -77,12 +99,16 @@
 }
 
 -(NSPoint)cordsForDataPoint:(DataPoint*)point {
+    return [self cordsForDataPointPrice:point.price];
+}
+
+-(NSPoint)cordsForDataPointPrice:(double)price {
     int height = self.bounds.size.height;
     double minPrice = [self.data getMinValue];
     double maxPrice = [self.data getMaxValue];
     double span = maxPrice - minPrice;
     double factor = height/span;
-    double y = point.price - minPrice;
+    double y = price - minPrice;
     double yPixel = y * factor;
     // TODO: actually get the real x value from the timestamp of this point instead of guessing that every point is spread equally across the x axis
     return NSMakePoint(0, yPixel);
