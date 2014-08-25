@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Noah Martin. All rights reserved.
 //
 
-#import "StockKit.h"
-#import <Cocoa/Cocoa.h>
+@import StockKit;
+@import Cocoa;
 
 @interface ListRowViewController : NSViewController
 

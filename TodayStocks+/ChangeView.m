@@ -20,5 +20,4 @@
     [self.delegate clicked];
 }
 
-
 @end

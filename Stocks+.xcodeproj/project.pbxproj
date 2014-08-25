@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F2502B319A01DA60015FDA7 /* DataPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2502B219A01DA60015FDA7 /* DataPoint.m */; };
 		4F35FD0819A8EEC900AA273B /* StockKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F35FD0719A8EEC900AA273B /* StockKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4F35FD1219A8EEC900AA273B /* StockKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F35FD1119A8EEC900AA273B /* StockKitTests.m */; };
-		4F3F9ACA19A0FE4C00CA9D87 /* StockGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3F9AC919A0FE4C00CA9D87 /* StockGraph.m */; };
 		4FAFF6C9199EEE0500B4D55E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAFF6C8199EEE0500B4D55E /* main.m */; };
 		4FAFF6CC199EEE0500B4D55E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAFF6CB199EEE0500B4D55E /* AppDelegate.m */; };
 		4FAFF6CE199EEE0500B4D55E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FAFF6CD199EEE0500B4D55E /* Images.xcassets */; };
@@ -23,10 +21,19 @@
 		4FAFF6FC199EEE9B00B4D55E /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FAFF6FB199EEE9B00B4D55E /* TodayViewController.xib */; };
 		4FAFF6FE199EEE9B00B4D55E /* ListRowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FAFF6FD199EEE9B00B4D55E /* ListRowViewController.xib */; };
 		4FAFF701199EEE9B00B4D55E /* TodayStocks+.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4FAFF6EA199EEE9B00B4D55E /* TodayStocks+.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		4FAFF70A199EEECE00B4D55E /* StockRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAFF709199EEECE00B4D55E /* StockRequest.m */; };
-		4FC3CCCF19AA5F06002AFB54 /* SymbolSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC3CCCE19AA5F06002AFB54 /* SymbolSearch.m */; };
-		4FF2142F19A85A06003B6E9D /* ChangeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2142E19A85A06003B6E9D /* ChangeView.m */; };
-		4FF727DC19A314180016B079 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF727DB19A314180016B079 /* GraphView.m */; };
+		4FC3CCD019AAB3D8002AFB54 /* StockKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F35FD0319A8EEC900AA273B /* StockKit.framework */; };
+		4FC3CCD119AAB489002AFB54 /* DataPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F2502B119A01DA60015FDA7 /* DataPoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4FC3CCD219AAB49B002AFB54 /* StockGraph.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F3F9AC819A0FE4C00CA9D87 /* StockGraph.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4FC3CCD319AAB4A0002AFB54 /* StockRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FAFF708199EEECE00B4D55E /* StockRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4FC3CCD419AAB4A5002AFB54 /* SymbolSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FC3CCCD19AA5F06002AFB54 /* SymbolSearch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4FC3CCD519AAB4E3002AFB54 /* GraphView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FF727DA19A314180016B079 /* GraphView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4FC3CCD619AAB4E7002AFB54 /* ChangeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FF2142D19A85A06003B6E9D /* ChangeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4FC3CCD719AAB538002AFB54 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF727DB19A314180016B079 /* GraphView.m */; };
+		4FC3CCD819AAB53C002AFB54 /* ChangeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2142E19A85A06003B6E9D /* ChangeView.m */; };
+		4FC3CCD919AAB550002AFB54 /* DataPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2502B219A01DA60015FDA7 /* DataPoint.m */; };
+		4FC3CCDA19AAB554002AFB54 /* StockGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3F9AC919A0FE4C00CA9D87 /* StockGraph.m */; };
+		4FC3CCDB19AAB557002AFB54 /* StockRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAFF709199EEECE00B4D55E /* StockRequest.m */; };
+		4FC3CCDC19AAB55B002AFB54 /* SymbolSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC3CCCE19AA5F06002AFB54 /* SymbolSearch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,8 +108,8 @@
 		4FAFF6FD199EEE9B00B4D55E /* ListRowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListRowViewController.xib; sourceTree = "<group>"; };
 		4FAFF708199EEECE00B4D55E /* StockRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StockRequest.h; path = "../TodayStocks+/StockRequest.h"; sourceTree = "<group>"; };
 		4FAFF709199EEECE00B4D55E /* StockRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StockRequest.m; path = "../TodayStocks+/StockRequest.m"; sourceTree = "<group>"; };
-		4FC3CCCD19AA5F06002AFB54 /* SymbolSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymbolSearch.h; sourceTree = "<group>"; };
-		4FC3CCCE19AA5F06002AFB54 /* SymbolSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SymbolSearch.m; sourceTree = "<group>"; };
+		4FC3CCCD19AA5F06002AFB54 /* SymbolSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SymbolSearch.h; path = "../TodayStocks+/SymbolSearch.h"; sourceTree = "<group>"; };
+		4FC3CCCE19AA5F06002AFB54 /* SymbolSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SymbolSearch.m; path = "../TodayStocks+/SymbolSearch.m"; sourceTree = "<group>"; };
 		4FF2142D19A85A06003B6E9D /* ChangeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChangeView.h; path = "../TodayStocks+/ChangeView.h"; sourceTree = "<group>"; };
 		4FF2142E19A85A06003B6E9D /* ChangeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChangeView.m; path = "../TodayStocks+/ChangeView.m"; sourceTree = "<group>"; };
 		4FF727DA19A314180016B079 /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphView.h; path = "../TodayStocks+/GraphView.h"; sourceTree = "<group>"; };
@@ -142,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FC3CCD019AAB3D8002AFB54 /* StockKit.framework in Frameworks */,
 				4FAFF6ED199EEE9B00B4D55E /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,6 +202,8 @@
 				4F3F9AC919A0FE4C00CA9D87 /* StockGraph.m */,
 				4FAFF708199EEECE00B4D55E /* StockRequest.h */,
 				4FAFF709199EEECE00B4D55E /* StockRequest.m */,
+				4FC3CCCD19AA5F06002AFB54 /* SymbolSearch.h */,
+				4FC3CCCE19AA5F06002AFB54 /* SymbolSearch.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -290,8 +300,6 @@
 				4FAFF6FB199EEE9B00B4D55E /* TodayViewController.xib */,
 				4FAFF6FD199EEE9B00B4D55E /* ListRowViewController.xib */,
 				4FAFF6EF199EEE9B00B4D55E /* Supporting Files */,
-				4FC3CCCD19AA5F06002AFB54 /* SymbolSearch.h */,
-				4FC3CCCE19AA5F06002AFB54 /* SymbolSearch.m */,
 			);
 			path = "TodayStocks+";
 			sourceTree = "<group>";
@@ -313,7 +321,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FC3CCD619AAB4E7002AFB54 /* ChangeView.h in Headers */,
+				4FC3CCD519AAB4E3002AFB54 /* GraphView.h in Headers */,
 				4F35FD0819A8EEC900AA273B /* StockKit.h in Headers */,
+				4FC3CCD319AAB4A0002AFB54 /* StockRequest.h in Headers */,
+				4FC3CCD419AAB4A5002AFB54 /* SymbolSearch.h in Headers */,
+				4FC3CCD119AAB489002AFB54 /* DataPoint.h in Headers */,
+				4FC3CCD219AAB49B002AFB54 /* StockGraph.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +521,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FC3CCD819AAB53C002AFB54 /* ChangeView.m in Sources */,
+				4FC3CCDA19AAB554002AFB54 /* StockGraph.m in Sources */,
+				4FC3CCD719AAB538002AFB54 /* GraphView.m in Sources */,
+				4FC3CCDC19AAB55B002AFB54 /* SymbolSearch.m in Sources */,
+				4FC3CCD919AAB550002AFB54 /* DataPoint.m in Sources */,
+				4FC3CCDB19AAB557002AFB54 /* StockRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,12 +560,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FAFF6F7199EEE9B00B4D55E /* TodayViewController.m in Sources */,
-				4F3F9ACA19A0FE4C00CA9D87 /* StockGraph.m in Sources */,
-				4FAFF70A199EEECE00B4D55E /* StockRequest.m in Sources */,
-				4FF2142F19A85A06003B6E9D /* ChangeView.m in Sources */,
-				4FF727DC19A314180016B079 /* GraphView.m in Sources */,
-				4FC3CCCF19AA5F06002AFB54 /* SymbolSearch.m in Sources */,
-				4F2502B319A01DA60015FDA7 /* DataPoint.m in Sources */,
 				4FAFF6FA199EEE9B00B4D55E /* ListRowViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

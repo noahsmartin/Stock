@@ -38,7 +38,6 @@
     resultString = [resultString substringToIndex:resultString.length-1];
     NSArray *result = [[[NSJSONSerialization JSONObjectWithData:[resultString dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:nil] objectForKey:@"ResultSet"] objectForKey:@"Result"];
     self.block([self extractSymbolFromResult:result]);
-    NSLog(@"resultString: %@", result);
 }
 
 -(NSArray*)extractSymbolFromResult:(NSArray*)result {

@@ -8,8 +8,8 @@
 
 #import "TodayViewController.h"
 #import "ListRowViewController.h"
-#import "SymbolSearch.h"
-#import <NotificationCenter/NotificationCenter.h>
+@import StockKit;
+@import NotificationCenter;
 
 @interface TodayViewController () <NCWidgetProviding, NCWidgetListViewDelegate, NCWidgetSearchViewDelegate, ChangeViewDelegate>
 

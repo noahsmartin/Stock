@@ -17,8 +17,9 @@ FOUNDATION_EXPORT const unsigned char StockKitVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <StockKit/PublicHeader.h>
 
 
-#import "StockRequest.h"
-#import "StockGraph.h"
-#import "DataPoint.h"
-#import "ChangeView.h"
-#import "GraphView.h"
+#import <StockKit/StockRequest.h>
+#import <StockKit/StockGraph.h>
+#import <StockKit/DataPoint.h>
+#import <StockKit/ChangeView.h>
+#import <StockKit/GraphView.h>
+#import <StockKit/SymbolSearch.h>
